@@ -1,0 +1,415 @@
+@font-face {
+  font-family: minecraftia;
+  src: url(../fonts/Minecraftia.ttf);
+}
+
+body, div, p, a {
+  font-family: minecraftia;
+}
+
+a {
+  color: #ccc;
+}
+
+.content-wrapper {
+  margin-top: 120px;
+  vertical-align: top;
+}
+
+#reactor-controls {
+  padding: 0 15px;
+  max-width: 300px;
+  box-sizing: border-box;
+  float: left;
+}
+
+.masthead {
+  height: 90px;
+  background-color: rgba(51,51,51,0.7);
+  z-index: 999;
+  width: 100%;
+}
+
+#controls-grid {
+}
+
+#page-container {
+  margin-left: 320px;
+}
+
+.page {
+  display: none;
+  position: relative;
+}
+
+.center-page {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.grid-option {
+  width: 60px;
+  height: 60px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: inline-block;
+  margin: 3px;
+  border: 1px solid #ccc;
+  padding: 1px;
+  cursor: pointer;
+}
+
+.texture {
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  pointer-events: none;
+}
+
+.grid-option.selected {
+  padding: 0;
+  border: 2px solid yellow;
+}
+
+h4 {
+  margin: 15px;
+  text-decoration: underline;
+}
+
+.dim-prompt {
+  display: inline-block;
+}
+
+.dim-prompt label {
+  display: block;
+}
+
+.dim-prompt input[type="text"] {
+  width: 50px;
+  color: #000;
+  text-align: center;
+}
+
+.buttons {
+  margin-top: 30px;
+}
+
+.grid-table {
+  max-width: 900px;
+}
+
+.grid-table, .grid-table td {
+  border-spacing: 0;
+  border-collapse: collapse;
+  padding: 0;
+  margin: 0;
+}
+
+.grid-table td.contents.selected {
+  background-color: rgba(0, 0, 0, 0.5);
+  filter:alpha(opacity=50);
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0.5);
+  opacity:.50;
+}
+
+.grid-table td.contents {
+  cursor: pointer;
+}
+
+.grid-table td .texture {
+  width: 50px;
+  height: 50px;
+}
+
+#fill-controls {
+  margin: 15px;
+}
+
+#size-controls {
+  margin: 15px;
+}
+
+#reactor-area {
+  max-width: 500px;
+  max-height: 500px;
+  overflow: visible;
+}
+
+#simulation-results ul {
+  list-style: none;
+}
+
+#simulation-results ul li {
+  text-align: left;
+  min-height: 24px;
+}
+
+#simulation-results .unit, #simulation-results .value {
+
+}
+
+#simulation-results .unit {
+}
+
+.ico {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: contain;
+  vertical-align: middle;
+}
+
+.ico-temperature {
+  background-image: url(../icons/temperature.gif);
+}
+
+.ico-energy {
+  background-image: url(../icons/energyOutput.gif);
+}
+
+.ico-consumption {
+  background-image: url(../icons/fuelUsageRate.gif);
+}
+
+.ico-fertility {
+  background-image: url(../icons/reactivity.gif);
+}
+
+.ico-hotFluid {
+  background-image: url(../icons/hotFluidOut.gif);
+}
+
+#error-area {
+  color: #f00;
+}
+
+.r-input-group {
+  display: inline-block;
+  vertical-align: top;
+  width: 300px;
+  text-align: left;
+}
+
+.r-input-group label.checkbox-label {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.r-input-group h4 {
+  margin: 10px 0;
+}
+
+#simulation-results {
+  display: none;
+  text-align: left;
+}
+
+#simulation-results h4 {
+}
+
+.info {
+  margin: 10px 0;
+  font-size: 0.75em;
+  font-style: italic;
+  text-align: left;
+}
+
+.input-container {
+  margin-bottom: 10px;
+}
+
+#control-rod-insertion {
+  width: 130px;
+  margin: 5px 8px 5px 0;
+  display: inline-block;
+}
+
+#control-rod-insertion-value {
+  vertical-align: top;
+}
+
+.r-input-group,
+.grid-table,
+#reactor-controls .grid-option {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline-style:none;/*IE*/
+}
+
+.tab-controls {
+  list-style: none;
+  text-align: left;
+  border-bottom: 1px solid #999;
+  padding: 0;
+  margin: 0 0 10px 0;
+}
+
+.tab-controls li {
+  display: inline-block;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.tab-controls li.active {
+  background-color: rgb(80,80,80);
+}
+
+.tab-controls li:hover {
+  background-color: rgb(80,80,80);
+}
+
+.tab-controls li a {
+  text-decoration: none;
+}
+
+.tab:not(.active) {
+  display: none;
+}
+
+.tab {
+  width: 270px;
+}
+
+#controls-tabs {
+  height: 300px;
+}
+
+.loading-animation {
+  background: url(../icons/loading.gif) no-repeat;
+  background-size: contain;
+  width: 16px;
+  height: 6px;
+  display: none;
+}
+
+.loading-animation.simulation {
+  float: right;
+}
+
+#costs-area ul {
+  list-style: none;
+}
+
+#costs-area .texture {
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+}
+
+#costs-area .material-label,
+#costs-area .material-label:before,
+#costs-area .material-count {
+  margin-left: 5px;
+  vertical-align: top;
+  line-height: 3em;
+  font-size: 0.75em;
+}
+
+#costs-area .material-count {
+  font-size: 0.9em;
+  line-height: 3em;
+  margin: 0;
+}
+
+#costs-area .material-label:before {
+  line-height: 3.8em;
+}
+
+#costs-area .material-count:before,
+#costs-area .material-count:after {
+  line-height: 4.5em;
+  font-size: 0.75em;
+  vertical-align: top;
+  padding: 0 2px;
+}
+
+#costs-area .material-count:before {
+ content: ' (';
+}
+#costs-area .material-count:after {
+  content: ')';
+}
+
+#costs-area li .material-label.parent.collapsed:before {
+  content: '[+] ';
+}
+
+#costs-area li .material-label.parent:not(.collapsed):before {
+  content: '[-] ';
+}
+
+#costs-area > ul {
+  padding: 0;
+  margin: 0;
+}
+
+#costs-area li {
+  cursor: pointer;
+}
+
+#costs-area > ul > li ul {
+  display: none;
+}
+
+.toggle-modes {
+  list-style: none;
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 0;
+  font-size: 0;
+}
+
+.toggle-modes li {
+  display: inline-block;
+  margin: 0;
+  padding: 5px;
+  font-size: 10pt;
+  cursor: pointer;
+}
+
+.toggle-modes :not(:first-child) {
+  border-left: 1px solid #ccc;
+}
+
+.toggle-modes li.active {
+  background-color: #666;
+}
+
+.toggle-modes li:not(.active):hover {
+  background-color: #444;
+}
+
+#costs-mode {
+  float: right;
+}
+
+#reactor-title {
+  float: left;
+  margin: 15px 100px;
+}
+
+.plusminus {
+  display: inline-block;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#optimize-control-rod {
+  margin-top: 10px;
+}
+
+.live-height-panel {
+  display: inline-block;
+}
